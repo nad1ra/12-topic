@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{% first_name %}{% last_name %}{% date_of_birth %}{% photo %}{% endblock %}
+    <div class="card">
+            <div class="card-header">
+                <h2>Student Details</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="https://img.freepik.com/premium-photo/portrait-cute-korean-student-wearing-school-uniform_825367-1356.jpg" class="img-fluid rounded-circle mb-3" alt="Student Photo">
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table">
+                            <tr>
+                                <th>First Name:</th>
+                                <td>Jane</td>
+                            </tr>
+                            <tr>
+                                <th>Last Name:</th>
+                                <td>Smith</td>
+                            </tr>
+                            <tr>
+                                <th>Date of Birth:</th>
+                                <td>1999-05-15</td>
+                            </tr>
+                        </table>
+                        <a href="student-list.html" class="btn btn-primary">Back to List</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

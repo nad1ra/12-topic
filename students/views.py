@@ -17,11 +17,14 @@ def student_create(request):
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         date_of_birth = request.POST.get('date_of_birth')
-        if (first_name and last_name and date_of_birth):
+        photo = request.FILES.get('photo')
+        # print(first_name, last_name, date_of_birth, photo)
+        if (first_name and last_name and date_of_birth and photo):
             Student.objects.create(
                 first_name=first_name,
                 last_name=last_name,
                 date_of_birth=date_of_birth,
+                photo=photo
             )
             return redirect('students:list')
     return render(request, 'students/student-create.html')

@@ -5,6 +5,6 @@ app_name = 'students'
 
 urlpatterns = [
     path('list/', views.student_list, name='list'),
-    path('student/create/', views.student_create, name='add'),
-    path('student/detail/', views.student_detail, name='add'),
+    path('create/', views.student_create, name='create'),
+    path('detail/<int:pk>/', views.student_detail, name='detail'),
 ]
